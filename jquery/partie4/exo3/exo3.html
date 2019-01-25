@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form class="" action="index.html" method="post">
+    <p>
+      Nom : <input type="text" name="Nom" value="" id="name">
+      Prenom : <input type="text" name="Prenom" value="" id="firstname">
+      Adresse Mail : <input type="text" name="Adresse Mail" value="" id="mail">
+      Numéro de téléphone : <input type="text" name="Numéro de téléphone" value="" id="phone">
+    </p>
+  </form>
+  <button id="send" class="btn" type="button" name="button">Valider</button>
+  <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script>
+  $('#send').on('click',function(){
+    var nameRegex = /^[A-Z]{1}[a-z-\s]+$/;
+    var mailRegex = /^[A-z-+A-z-0-9-.]+@+[A-z]+.+[a-z]{2,3}$/;
+    var phoneRegex = /^+|[0-9]{10}$/;
+    var name = $('#name').val();
+    var firstname = $('#firstname').val();
+    var mail = $('#mail').val();
+    var phone = $('#phone').val();
+    if (!(nameRegex.test(name) && nameRegex.test(firstname) && mailRegex.test(mail) && phoneRegex.test(phone))) {
+      alert("Erreur !");
+    }
+    else {
+      alert("Merci de votre participation");
+    }
+  })
+  </script>
+</body>
+</html>

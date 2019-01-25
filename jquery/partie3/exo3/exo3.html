@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Exercice 3</title>
+</head>
+<body>
+  <input type="text" name="misteryGame" value="0" id="Value">
+  <button class="btn" type="button" name="button">Valider</button>
+  <script>
+  var result = Math.floor((Math.random() * 100) + 1);
+  console.log(result);
+  var i = 0;
+  function compareResult(compare){
+    compare= document.querySelector('#Value').value;
+    if (compare < result) {
+      i++;
+      return alert("C'est plus !");
+    }
+    else if (compare > result) {
+      i++;
+      return alert("C'est moins !");
+    }
+    else if (compare = result) {
+      i++
+      return alert("Tu as gagner en " + i + " coup");
+    }
+  }
+  $('.btn').on('click',compareResult);
+  </script>
+</body>
+</html>

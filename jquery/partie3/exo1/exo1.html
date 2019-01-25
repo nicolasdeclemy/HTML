@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <input type="text" name="Compteur" value="0" id="compt" >
+  <button class="btn btn-primary" type="button" name="button">Clique là</button>
+  <script>
+  function increment() {
+      $('#compt').val( function(i, compte) {
+          return ++compte;
+      });
+  }
+  $('.btn').click(increment);
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html lang="fr" />
+ <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Style.css">
+ </head>
+ <body>
+    <form method="post" action="traitement.php"> <!-- utile pour le .php -->
+      <fieldset id="Section1"> <!-- class="Section" pour un groupe-->
+      <legend id="legend1">Votre identité</legend>
+      <ol> <!-- <br> saut de ligne -->
+        <li><label>Nom :<label><input placeholder="Nom" /></li> <!--<label for="Nom">-->
+        <li><label>Prénom :<label><input placeholder="Prénom" /></li>
+        <li><label>Addresse mail :<label><input placeholder="Addresse mail" /></li>
+      </ol>
+      </fieldset>
+     </form>
+     <form>
+       <fieldset id="Section2">
+        <legend id="legend2">Addresse de livraison</legend>
+       <ol>
+         <li><label>Addresse :<label><textarea></textarea></li> <!-- textarea cols="15" rows="5" -->
+         <li><label>Code postal :<label><input placeholder="Code postal" /></li>
+         <li><label>Ville  :<label><input placeholder="Ville" /></li>
+       </ol>
+       </fieldset>
+     </form>
+     <form>
+     <fieldset id="Section3">
+      <legend id="legend3">Informations de réglement</legend>
+      <ol>
+        <li><label>Type de carte bancaire :</label></li>
+        <p><input type="radio" name="VISA" value="radio1" /><label>VISA</label></p>
+        <p><input type="radio" name="Mastercard" value="radio2" /><label for="Mastercard">Mastercard</label></P>
+        <li><label>Numéro de carte :<label><input placeholder="Numéro de carte" /></li>
+        <li><label>Code de sécurité :<label><input placeholder="Code de sécurité" /></li>
+        <li><label>Nom du titulaire :<label><input placeholder="Nom du titulaire" /></li>
+      </ol>
+     </fieldset>
+     <input type="submit" name="envoi" value="J'achète!"> <!--value="test" valeur par défaut-->
+    </form>
+ </body>
+</html>

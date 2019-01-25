@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form>
+    <!--onkeyup pour activé la fonction à l'interieur -->
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" onkeyup='keyPress()' />
+  </form>
+  <script type="text/javascript">
+
+    function keyPress(){
+      var lastName = document.getElementById('lastname').value;
+      alert('Tu as appuyé sur :' + lastName);
+    }
+</script>
+</body>
+</html>

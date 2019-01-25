@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Exercice 2</title>
+</head>
+<body>
+  <img src="images/image.jpg" id="image" />
+  <script>
+    $(document).ready(function(){
+           // dblclick pour que ça fonctionne au doubleclick le changement de dimention
+          $('#image').dblclick(function(){
+         $('#image').css('width','500px');
+         });
+        });
+    </script>
+  </body>
+</html>

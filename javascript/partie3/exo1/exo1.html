@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 1partie3</title>
+</head>
+<body>
+  <img src="images/image1.jpg" id="image1" onmouseover="f_border()" onmouseout="f_noborder()"/>
+</body>
+<script>
+function f_border()
+{
+  document.getElementById("image1").style.border = "3px solid red";
+}
+function f_noborder()
+{
+  document.getElementById("image1").style.border = "none";
+}
+</script>
+
+</html>

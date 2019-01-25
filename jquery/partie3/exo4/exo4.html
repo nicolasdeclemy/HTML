@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="Assets/CSS/Exercice4.css">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <div style="height:10px; border:2px solid black;" id="rect"></div>
+  <button class="btn" type="button" name="button" id="Btn1">Hauteur (RAZ si =100px)</button>
+  <button class="btn" type="button" name="button" id="Btn2">Vert</button>
+  <button class="btn" type="button" name="button" id="Btn3">RAZ couleur</button>
+  <button class="btn" type="button" name="button" id="Btn4">Disparition rectangle</button>
+  <button class="btn" type="button" name="button" id="Btn5">Apparition rectangle</button>
+  <script>
+  function btn1(){
+    var actHeight = $('#rect').height();
+    if (actHeight < 100) {
+      var modHeight = actHeight + 10;
+      $('#rect').height(modHeight);
+    }
+    else if (actHeight = 100) {
+      $('#rect').css('height',10);
+    }
+  }
+  function btn2(){
+    $('#rect').css('background-color','green');
+  }
+  function btn3(){
+    $('#rect').css('background-color','inherit');
+  }
+  function btn4(){
+    $('#rect').hide();
+  }
+  function btn5(){
+    $('#rect').show();
+  }
+  $('#Btn1').on('click',btn1);
+  $('#Btn2').on('click',btn2);
+  $('#Btn3').on('click',btn3);
+  $('#Btn4').on('click',btn4);
+  $('#Btn5').on('click',btn5);
+  </script>
+</body>
+</html>

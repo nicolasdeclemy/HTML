@@ -1,0 +1,9 @@
+body {
+  padding-top: 10px;
+}
+div {
+  border: 8px solid white;
+  border-radius: 1px;
+  line-height: 8px;
+  text-align: center;
+}

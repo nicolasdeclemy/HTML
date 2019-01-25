@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4partie 3</title>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="password">Votre mot de passe : </label>
+      <input type="text" name="password" id="password" />
+    </div>
+    <div>
+      <label for="confirmPassword">Confirmez : </label>
+      <input type="text" name="confirmPassword" id="confirmPassword" />
+    </div>
+    <div>
+      <input type="submit" name="submit" id="submit" value="Varification" onclick="varification()"/>
+    </div>
+  </form>
+</body>
+</html>
+
+<script>
+// On récupère le submit
+var button = document.getElementById('submit');
+// On attribue une fonction liée à un événement au submit
+//on empêche la page de se rafraîchir automatiquement
+button.onclick = function(e)
+{
+  e.preventDefault();
+  varification();
+}
+function varification()
+{
+//On récupère les valeurs de password & confirmPassword
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  var password = document.getElementById('password').value;
+//On attrivue des bordures aux labels, épaisseur style et couleur
+  if (confirmPassword != password)
+  {
+    document.getElementById("confirmPassword").style.border = "3px solid red";
+    document.getElementById("password").style.border = "3px solid red";
+  }
+  else
+  {
+    document.getElementById("confirmPassword").style.border = "3px solid green";
+    document.getElementById("password").style.border = "3px solid green";
+  }
+}
+</script>

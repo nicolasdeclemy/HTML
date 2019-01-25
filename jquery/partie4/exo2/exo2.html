@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 2 partie4</title>
+  <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <h1>Relevé de notes de Nicolas semestre 2019</h1>
+  <form>
+    <label for="note">note</label>
+    <input type="text" id="note" class="champ">
+    <input type="button" id="envoyer" value="Envoyer">
+  </form>
+  <p id="display">
+  </p>
+  <script>
+  $(function(){
+    var notes = [];
+    $("#envoyer").click(function(){
+      notes.push($('#note').val());
+      console.log(notes);
+      if(notes.length==5){
+
+        $('#envoyer').prop('disabled', true);
+        $('#display').html('Votre moyenne est ' + average(notes));
+      }
+    });
+    //focntion permet de calculer la moyenne des éléments d'un tableau qu'on lui passe un paramétre
+    function average(note){
+      var somme = 0;
+      for ( var i = 0; i < notes.length; i++){
+        somme += parseInt(notes[i]);
+      }
+      return somme/notes.length;
+    }
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

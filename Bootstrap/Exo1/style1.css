@@ -1,0 +1,10 @@
+body {
+  padding-top: 10px;
+}
+[class*="col-"], footer {
+  background-color: lightgreen;
+  border: 1px solid white;
+  border-radius: 1px;
+  line-height: 25px;
+  text-align: center;
+}
